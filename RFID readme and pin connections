@@ -1,0 +1,95 @@
+# ESP8266 RFID Automatic Door with OLED Display 🚪🔐
+
+A smart RFID-based automatic door system using **ESP8266 (NodeMCU)** with:
+- RFID access control
+- Servo motor gate
+- Traffic light indicators
+- OLED status display (2-line, big font)
+
+This project is ideal for **college projects, demos, and IoT learning**.
+
+---
+
+## 🔧 Hardware Used
+- ESP8266 NodeMCU
+- MFRC522 RFID Reader
+- RFID Cards / Tags
+- Servo Motor (SG90 / MG90)
+- OLED Display (0.96" SSD1306, I2C)
+- Red & Green LEDs
+- 220Ω Resistors
+- External 5V supply (for servo)
+
+---
+
+## 🔌 Pin Connections
+
+### RFID (MFRC522)
+| RFID Pin | ESP8266 |
+|--------|--------|
+| SDA | D8 (GPIO15) |
+| SCK | D5 (GPIO14) |
+| MOSI | D7 (GPIO13) |
+| MISO | D6 (GPIO12) |
+| RST | D0 (GPIO16) |
+| VCC | 3.3V |
+| GND | GND |
+
+### Servo Motor
+| Servo | ESP8266 |
+|-----|--------|
+| Signal | D3 (GPIO0) |
+| VCC | External 5V |
+| GND | GND |
+
+### Traffic LEDs
+| LED | ESP8266 |
+|----|--------|
+| Red | D1 (GPIO5) |
+| Green | D2 (GPIO4) |
+
+### OLED Display (SSD1306)
+| OLED | ESP8266 |
+|----|--------|
+| SDA | RX (GPIO3) |
+| SCL | TX (GPIO1) |
+| VCC | 3.3V |
+| GND | GND |
+
+---
+
+## 🖥️ OLED Display Messages
+- SCAN RFID / CARD
+- AUTH / SUCCESS
+- UNLOCKING / WAIT....
+- PROCEED / NOW >>>
+- GATE / IS LOCKING
+- GATE / LOCKED
+- ACCESS / DENIED
+
+---
+
+## ⚡ Power Notes
+- RFID & OLED → **3.3V only**
+- Servo → **External 5V**
+- All grounds must be **common**
+
+---
+
+## ▶️ How It Works
+1. Power ON → OLED shows **SCAN RFID CARD**
+2. Scan authorized card → Gate opens
+3. Gate stays open for 8 seconds
+4. Gate closes with status messages
+5. System returns to idle state
+
+---
+
+## 🎥 Demo Video
+Check the full working demo on YouTube 👇  
+(Link in video description)
+
+---
+
+## 📜 License
+Free to use for learning and educational projects.
